@@ -1,0 +1,12 @@
+<h1>Web Scraper</h1>
+<%= form_with url: scrape_path, method: :post, id: 'scrape-form' do |f| %>
+  <div>
+    <%= f.label :fields, 'Fields (JSON)' %>
+    <br>
+    <%= f.text_area :fields, id: 'fields-input', size: '100x20' %>
+  </div>
+  <%= f.submit 'Scrape', id: 'scrape-button' %>
+<% end %>
+
+<div id="scraped-data">
+</div>
